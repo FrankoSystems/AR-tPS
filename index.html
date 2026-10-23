@@ -451,7 +451,7 @@ body::before {
       const handleVerify = async (item) => {
         if (!supabase) return;
         
-        const phoneDigits = prompt(`ANTI-POACHING SECURITY:\nEnter the customer's last 4 digits of phone number to verify this transaction for ${currentStation}:`);
+        const phoneDigits = prompt(`ANTI-POACHING SECURITY:\nEnter the customer's last 3 digits of phone number to verify this transaction for ${currentStation}:`);
         if (!phoneDigits) return;
 
         if (!item.raw_message.includes(phoneDigits)) {
